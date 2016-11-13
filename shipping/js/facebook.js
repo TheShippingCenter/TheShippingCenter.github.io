@@ -26,7 +26,7 @@
    }(document, 'script', 'facebook-jssdk'));
     
     function getUserFriends() {
-  FB.api('me/taggable_friends', function (response) {
+  FB.api('user_friends', function (response) {
     console.log('Got friends: ', response.data);
     //$("#friendslist").html('<img src="'+response.data[0].picture.data.url+'"/>');
     // maybe an $.each as well
@@ -40,23 +40,15 @@
               
     
 
-    function login() {
+
+       function login() {
         FB.login(function(response) {
-            if(response.status === 'connected'){
-              document.getElementById('status').innerHTML = 'We are connected.';
-                
-                
-               showAccountInfo();
-                
-                
-          } else if (response.status === 'not_authorized') {
-              document.getElementById('status').innerHTML = 'We are not logged in';
-          } else {
-              document.getElementById('status').innerHTML = 'You are not logged into Facebook';
-          }
-        }
-                );
+    if (response.authResponse) {
+        window.location.reload();
     }
+}, {scope:'email,user_friends,public_profile'});
+    }
+
             
 function getFirstName() {
     console.log(response.first_name);
