@@ -33,7 +33,7 @@
      var friendMarkup = '';
      $.each(response.data, function(e, v) {
        friendMarkup += '<img src="' + v.picture.data.url +'" alt="'+ v.name +' picture"/>';
-     }
+     })
      $("#friendlist").html(friendMarkup);
   });
 }
