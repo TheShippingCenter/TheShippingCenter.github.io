@@ -53,5 +53,13 @@
 function getFirstName() {
     console.log(response.first_name);
 }
+FB.api(
+    "/{user-id}/friends",
+    function (response) {
+      if (response && !response.error) {
+        console.log(response);
+      }
+    }
+);
     
 
