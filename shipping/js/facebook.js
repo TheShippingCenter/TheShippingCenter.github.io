@@ -25,13 +25,20 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
     
+    function showAccountInfo() {
+        FB.api('/me?fields=name,picture', function(response) {
+            console.log(response.name)
+        }
+              )
+    }
+
     function login() {
         FB.login(function(response) {
             if(response.status === 'connected'){
               document.getElementById('status').innerHTML = 'We are connected.';
                 
                 
-                console.log(response.first_name);
+               showAccountInfo();
                 
                 
           } else if (response.status === 'not_authorized') {
