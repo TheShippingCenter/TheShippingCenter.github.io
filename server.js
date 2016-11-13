@@ -1,3 +1,5 @@
+var ip = "ws://192.168.1.160:1430/r";
+
 function accept() {
     AcceptMatch("Chris Icarus-Samurai", "Sean Neas");
     alert("You Accepted Your Friends Shiproposal")
@@ -21,7 +23,7 @@ function CreateMatch(test1, test2){
                //("WebSocket is supported by your Browser!");
                
                // Let us open a web socket
-               var ws = new WebSocket("ws://192.168.1.132:1430/r");
+               var ws = new WebSocket(ip);
 				
                ws.onopen = function(){
                   // Web Socket is connected, send data using send()
@@ -54,7 +56,7 @@ function CreateMatch(test1, test2){
                ////("WebSocket is supported by your Browser!");
                
                // Let us open a web socket
-               var ws = new WebSocket("ws://192.168.1.132:1430/r");
+               var ws = new WebSocket(ip);
 				
                ws.onopen = function(){
                   // Web Socket is connected, send data using send()
@@ -65,6 +67,7 @@ function CreateMatch(test1, test2){
                ws.onmessage = function (evt) 
                { 
                   var received_msg = evt.data;
+                  alert("You have boarded the " + received_msg + " Ship!\nTheir phone number is 858-314-1592");
                   //("Message is received..." + received_msg);
                };
 				
@@ -87,18 +90,17 @@ function CreateMatch(test1, test2){
                //("WebSocket is supported by your Browser!");
                
                // Let us open a web socket
-               var ws = new WebSocket("ws://192.168.1.132:1430/r");
+               var ws = new WebSocket(ip);
 				
                ws.onopen = function(){
                   // Web Socket is connected, send data using send()
                   ws.send("d--"+test1+"--"+test2);
-                  //("Message is sent...");
                };
 				
                ws.onmessage = function (evt) 
                { 
                   var received_msg = evt.data;
-                  //("Message is received..." + received_msg);
+
                };
 				
                ws.onclose = function()
