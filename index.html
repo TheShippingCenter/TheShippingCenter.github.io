@@ -16,7 +16,7 @@
             <span>The Shipping Center</span>
         </div>
         <div id="status">
-            <a href="ship.html" onclick="login()">
+            <a onclick="login()">
                 <button class="btn red" type="button">
                         <span>
                             <i class="fa fa-facebook-official" aria-hidden="true"></i> Login with Facebook
@@ -25,53 +25,13 @@
             </a>
         </div>        
         
-        <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '183728002087329',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-      FB.AppEvents.logPageView();
-      FB.getLoginStatus(function(response) {
-          if(response.status === 'connected'){
-              document.getElementById('status').innerHTML = 'We are connected.';
-          } else if (response.status === 'not_authorized') {
-              document.getElementById('status').innerHTML = 'We are not logged in';
-          } else {
-              document.getElementById('status').innerHTML = 'You are not logged into Facebook';
-          }});
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-    
-    function login() {
-        FB.login(function(response) {
-            if(response.status === 'connected'){
-              document.getElementById('status').innerHTML = 'We are connected.';
-          } else if (response.status === 'not_authorized') {
-              document.getElementById('status').innerHTML = 'We are not logged in';
-          } else {
-              document.getElementById('status').innerHTML = 'You are not logged into Facebook';
-          }
-        }
-                );
-    }
-            
-    
-</script>
-        <div id="status"></div>
-        <button onclick="login()">Clcikety</button>
+     
+        <div id="status" style="text-align:center; font-family:'Roboto', sans-serif;"></div>
     </body>
     
     <script src="script.js"></script>
     <script src="assets/js/sly.min.js"></script>
     <script src="http://darsa.in/sly/examples/js/vendor/plugins.js"></script>
+    <script src="assets/js/facebook.js"></script>
     <script src="assets/js/facebook.js"></script>
 </html>
