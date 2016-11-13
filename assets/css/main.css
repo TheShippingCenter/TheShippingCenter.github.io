@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto');
+
+.logo {
+    text-align: center;
+    color: #0CAADC;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 3em;
+    -moz-transform:scale(0.5);
+    -webkit-transform:scale(0.5);
+    transform:scale(0.5);
+    top: 0;
+}
+
+#action {
+    text-align: center;
+}
+.login-fb {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #39579B;
+    color: white;
+    display: block;
+        white-space: nowrap;
+
+        
+}
