@@ -27,6 +27,11 @@
         FB.login(function(response) {
             if(response.status === 'connected'){
               document.getElementById('status').innerHTML = 'We are connected.';
+                
+                
+                console.log(response.first_name);
+                
+                
           } else if (response.status === 'not_authorized') {
               document.getElementById('status').innerHTML = 'We are not logged in';
           } else {
