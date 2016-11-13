@@ -26,16 +26,18 @@
    }(document, 'script', 'facebook-jssdk'));
     
     function getUserFriends() {
+        var friendMarkup = '';
   FB.api('/me?fields=friends', function (response) {
     console.log('Got friends: ', response.friends);
     $("#friendslist").html('<img src="'+response.friends[0].picture.data.url+'"/>');
      //maybe an $.each as well
-     var friendMarkup = '';
+     
      $.each(response.friends, function(e, v) {
        friendMarkup += '<img src="' + v.picture.data.url +'" alt="'+ v.name +' picture"/>';
      })
      $("#friendlist").html(friendMarkup);
   });
+        return friendMarkup;
 }
               
     
