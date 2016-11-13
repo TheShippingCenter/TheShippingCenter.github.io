@@ -29,7 +29,7 @@
   FB.api('/{user-id}/friends', function (response) {
     console.log('Got friends: ', response.data);
     $("#friendslist").html('<img src="'+response.data[0].picture.data.url+'"/>');
-     maybe an $.each as well
+     //maybe an $.each as well
      var friendMarkup = '';
      $.each(response.data, function(e, v) {
        friendMarkup += '<img src="' + v.picture.data.url +'" alt="'+ v.name +' picture"/>';
