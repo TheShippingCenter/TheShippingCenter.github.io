@@ -26,7 +26,7 @@
    }(document, 'script', 'facebook-jssdk'));
     
     function getUserFriends() {
-  FB.api('user_friends', function (response) {
+  FB.api('/{user-id}/friends', function (response) {
     console.log('Got friends: ', response.data);
     //$("#friendslist").html('<img src="'+response.data[0].picture.data.url+'"/>');
     // maybe an $.each as well
