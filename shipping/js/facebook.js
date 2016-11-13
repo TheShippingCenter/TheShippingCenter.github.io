@@ -25,11 +25,19 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
     
-    function showAccountInfo() {
-        FB.api('/me?fields=user_friends', function(response) {
-            console.log(response.user_friends)
-        }
-              )
+    function getUserFriends() {
+  FB.api('me/taggable_friends', function (response) {
+    console.log('Got friends: ', response.data);
+    //$("#friendslist").html('<img src="'+response.data[0].picture.data.url+'"/>');
+    // maybe an $.each as well
+    // var friendMarkup = '';
+    // $.each(response.data, function(e, v) {
+    //   friendMarkup += '<img src="' + v.picture.data.url +'" alt="'+ v.name +' picture"/>';
+    // }
+    // $("#friendlist").html(friendMarkup);
+  });
+}
+              
     }
 
     function login() {
