@@ -38,7 +38,7 @@
   });
 }
               
-    }
+    
 
     function login() {
         FB.login(function(response) {
