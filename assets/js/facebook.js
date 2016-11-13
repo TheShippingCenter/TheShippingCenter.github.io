@@ -5,14 +5,15 @@
       version    : 'v2.8'
     });
       FB.AppEvents.logPageView();
-      FB.getLoginStatus(function(response) {
+      /*
+     FB.getLoginStatus(function(response) {
           if(response.status === 'connected'){
               document.getElementById('status').innerHTML = 'We are connected.';
           } else if (response.status === 'not_authorized') {
               document.getElementById('status').innerHTML = 'We are not logged in';
           } else {
               document.getElementById('status').innerHTML = 'You are not logged into Facebook';
-          }});
+          }});*/
   };
 
   (function(d, s, id){
