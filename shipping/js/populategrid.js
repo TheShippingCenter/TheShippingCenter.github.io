@@ -3,7 +3,7 @@ var topGridImg = []
 
 var bottomGridName = []
 var bottomGridImg = []
-
+var first = true;
 function add(name, img) {
     var list1 = document.getElementById("topGrid");
     
@@ -13,6 +13,10 @@ function add(name, img) {
     s += '" />'; // HTML string
 
     var entry = document.createElement('li');
+    if (first) {
+        entry.addClass("active");
+        first = false;
+    }
     entry.innerHTML = s;
 
     list1.appendChild(entry);
