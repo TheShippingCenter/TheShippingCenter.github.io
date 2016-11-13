@@ -53,6 +53,7 @@
 function getFirstName() {
     console.log(response.first_name);
 }
+function getFriends() {
 FB.api(
     "/{user-id}/friends",
     function (response) {
@@ -61,5 +62,5 @@ FB.api(
       }
     }
 );
-    
+}
 
