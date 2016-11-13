@@ -63,9 +63,23 @@
         }
                 );
     }
+            
+    function logout() {
+        FB.logout(function(response)
+                  if(response.status === 'connected'){
+              document.getElementById('status').innerHTML = 'We are connected.';
+          } else if (response.status === 'not_authorized') {
+              document.getElementById('status').innerHTML = 'We are not logged in';
+          } else {
+              document.getElementById('status').innerHTML = 'You are not logged into Facebook';
+          }
+                 
+                 );
+    }
 </script>
         <div id="status"></div>
         <button onclick="login()">Click here guys</button>
+        <button onclick="logout()">Logout</button>
     </body>
     
     <script src="script.js"></script>
