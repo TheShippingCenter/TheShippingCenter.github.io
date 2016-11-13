@@ -58,7 +58,7 @@ FB.api(
     "/{user-id}/friends",
     function (response) {
       if (response && !response.error) {
-        console.log(response);
+        console.log(response.data[0]);
       }
     }
 );
