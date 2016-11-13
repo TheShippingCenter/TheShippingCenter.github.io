@@ -26,8 +26,8 @@
    }(document, 'script', 'facebook-jssdk'));
     
     function showAccountInfo() {
-        FB.api('/me?fields=name,picture', function(response) {
-            console.log(response.name)
+        FB.api('/me?fields=user_friends', function(response) {
+            console.log(response.user_friends)
         }
               )
     }
