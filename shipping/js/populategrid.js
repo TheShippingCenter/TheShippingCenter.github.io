@@ -3,7 +3,6 @@ var topGridImg = []
 
 var bottomGridName = []
 var bottomGridImg = []
-var first = true;
 function add(name, img) {
     var list1 = document.getElementById("topGrid");
     
