@@ -30,6 +30,7 @@
         window.location.reload();
     }
 }, {scope:'email,user_friends,public_profile'});
+        
     }
             
 function getFirstName() {

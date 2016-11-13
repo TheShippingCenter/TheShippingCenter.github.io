@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto');
+
+body {
+    text-align: center;
+}
+ul {
+    list-style: none;
+
+}
+#logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5em;
+    color: #0CAADC;
+    text-align: center;
+    text-transform: uppercase;
+}   
+#logoIMAGE {
+    height: 50px;
+    width: 50px;
+}
+
+img {
+  border: 0 none;
+  display: inline-block;
+  height: auto;
+ 
+  vertical-align: middle;
+}
+.match {
+    width: 246px;
+    height: 246px;
+}
+
+.ship {
+    font-size: 2em;
+}
